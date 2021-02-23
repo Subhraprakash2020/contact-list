@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact-list</title>
+
+
+    <link rel="stylesheet" href="bootstrap-4.3.1/bootstrap-4.3.1/dist/css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contact">
+        <ul>
+
+            <li><span class="newName">Subhre</span>&nbsp;&nbsp;<span class="newNumber">1111111111</span>&nbsp;&nbsp;<span><button type="button" class="btn btn-primary" 
+                onclick="editcontact('Subhre', '1111111111')">Edit</button></span><span><button class="delete" onclick="deleteContact(this)" type="button">Delete</button></span></li>
+
+
+        </ul>
+        <li> <span><input class="name" type="text" placeholder="Enter a name"></span>
+            <span><input class="phone" type="number"placeholder="input a nunber  "></span><span><button type="button" class="add">Add</button>
+            </span><span><button type="button" class="delete">Delete</button></span></li>
+
+
+
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit contact</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="myname" class="col-form-label">Name:</label>
+                                <input type="text" class="form-control" id="myname">
+                            </div>
+                            <div class="form-group">
+                                <label for="mynumber" class="col-form-label">Number:</label>
+                                <textarea class="form-control" id="mynumber"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary save-phone">Save contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="bootstrap-4.3.1/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

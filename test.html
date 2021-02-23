@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Practice 3</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+
+    <div class="Title" align="center">
+        <h1>Hello</h1>
+        <p>This website will use JavaScript to create interactive elements.</p>
+    </div>
+
+    <div class="1">
+        <h3>Test 1</h3>
+        <ul id="list">
+            <li>Milk</li>
+            <li>Eggs</li>
+        </ul>
+        <input id="textbox">
+        <button id="add">Add to list</button>
+    </div>
+
+    <script>
+        $('#add').click(function() {
+            var listvalue = $('#textbox').val();
+            $("#textbox").val("");
+            $('ul').append('<li>' + listvalue + '</li>');
+        });
+
+        $('#textbox').keypress(function(event) {
+            if (event.which === 13) {
+                var listvalue = $('#textbox').val();
+                $('#textbox').val("");
+                $('ul').append('<li>' + listvalue + '</li>');
+            }
+        });
+
+        $('li').click(function(e) {
+            $(e.target).remove();
+        });
+    </script>
+</body>
+
+</html>
